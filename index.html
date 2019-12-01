@@ -259,7 +259,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/01/issues-for-poster-slide-gitlatexdiff/" itemprop="url">关于poster, latex-diff, slide的一些坑</a></h1>
+                <a class="post-title-link" href="/2019/12/01/issues-for-poster-slide-gitlatexdiff/" itemprop="url">poster, latex-diff, slide的一些坑</a></h1>
         
 
         <div class="post-meta">
@@ -322,12 +322,12 @@
 <li>不能使用 <code>table</code>, <code>figure</code>等浮动体</li>
 <li>表格可以使用以下格式：</li>
 </ul>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">\<span class="name">begin</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">\<span class="name">end</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">end</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
 
 <ul>
 <li>图片可以使用以下格式：</li>
 </ul>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">\<span class="name">includegraphic</span><span class="string">[width=.3\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">includegraphic</span><span class="string">[width=.3\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
 
 <ul>
 <li>可以使用<code>\vspace{.3cm}</code>来调整上下间距，使得海报更整齐美观</li>
@@ -352,19 +352,18 @@
 </li>
 </ul>
 <h2 id="slide"><a href="#slide" class="headerlink" title="slide"></a>slide</h2><ul>
-<li><p>需要使用dvi-&gt;ps-&gt;pdf这样的顺序生成</p>
-<ul>
+<li>需要使用dvi-&gt;ps-&gt;pdf这样的顺序生成<ul>
 <li>具体来说，是<code>latex</code>→<code>dvi2ps</code>→<code>ps2pdf</code></li>
 <li>也许pdflatex也可以, 不过我没试</li>
 </ul>
 </li>
-<li><p>slide模板不支持<code>minipage</code>环境</p>
-</li>
-<li><p>双栏排版可以使用以下格式：</p>
+<li>slide模板不支持<code>minipage</code>环境</li>
+<li>双栏排版可以使用以下格式：</li>
+</ul>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">twocolumn</span><span class="string">[</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lfrheight=0.5\slideheight, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    rfrheight=0.2\slideheight, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lineheight=0.5\slideheight,</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lineprop=&#123;linestype=dotted,</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lfrprop=&#123;&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    rfrprop=&#123;&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    topsep=0.1cm]</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">%colum1%</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">%colum2%</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-</li>
-<li><p>其中</p>
-</li>
+
+<ul>
+<li>其中</li>
 </ul>
 <table>
 <thead>
@@ -411,7 +410,8 @@
 </li>
 <li>如果只是简单的想把两张图片并排放，可以使用</li>
 </ul>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">\<span class="name">includegraphics</span><span class="string">[width=.4\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">\<span class="name">quad</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="tag">\<span class="name">includegraphics</span><span class="string">[width=.4\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">includegraphics</span><span class="string">[width=.4\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">quad</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">includegraphics</span><span class="string">[width=.4\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+
 <h2 id="latex编写环境推荐"><a href="#latex编写环境推荐" class="headerlink" title="latex编写环境推荐"></a>latex编写环境推荐</h2><ul>
 <li>推荐使用vscode编写latex</li>
 <li>工具链的配置可以参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/38178015</a></li>
