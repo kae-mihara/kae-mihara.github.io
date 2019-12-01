@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>kae的博客</title>
+  <title>两只三花</title>
   
-  
+  <subtitle>kae的blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sanhuax2.xyz/"/>
