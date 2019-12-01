@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Kae的博客</title>
+  <title>kae的博客</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://blog.sanhuax2.xyz/"/>
   <updated>2019-12-01T10:17:32.819Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://blog.sanhuax2.xyz/</id>
   
   <author>
-    <name>Mihara Kae</name>
+    <name>mihara kae</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>poster, latex-diff, slide的一些坑</title>
-    <link href="http://yoursite.com/2019/12/01/issues-for-poster-slide-gitlatexdiff/"/>
-    <id>http://yoursite.com/2019/12/01/issues-for-poster-slide-gitlatexdiff/</id>
+    <link href="http://blog.sanhuax2.xyz/2019/12/01/issues-for-poster-slide-gitlatexdiff/"/>
+    <id>http://blog.sanhuax2.xyz/2019/12/01/issues-for-poster-slide-gitlatexdiff/</id>
     <published>2019-12-01T04:17:13.000Z</published>
     <updated>2019-12-01T10:17:32.819Z</updated>
     
@@ -38,14 +38,14 @@
     
     
     
-      <category term="FLIP00 踩坑指南" scheme="http://yoursite.com/tags/FLIP00-%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/"/>
+      <category term="FLIP00 踩坑指南" scheme="http://blog.sanhuax2.xyz/tags/FLIP00-%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
   <entry>
     <title>博客测试</title>
-    <link href="http://yoursite.com/2019/11/30/title/"/>
-    <id>http://yoursite.com/2019/11/30/title/</id>
+    <link href="http://blog.sanhuax2.xyz/2019/11/30/title/"/>
+    <id>http://blog.sanhuax2.xyz/2019/11/30/title/</id>
     <published>2019-11-30T07:03:56.000Z</published>
     <updated>2019-12-01T07:21:28.793Z</updated>
     
@@ -66,8 +66,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/11/30/hello-world/"/>
-    <id>http://yoursite.com/2019/11/30/hello-world/</id>
+    <link href="http://blog.sanhuax2.xyz/2019/11/30/hello-world/"/>
+    <id>http://blog.sanhuax2.xyz/2019/11/30/hello-world/</id>
     <published>2019-11-30T06:59:22.573Z</published>
     <updated>2019-11-30T06:59:22.574Z</updated>
     
