@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="cn">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="FLIP00 踩坑指南," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐Poster 不能在数学环境和文件路径以外的地方出现未转义的下划线 _ 不能使用 table, figure等浮动体 表格可以使用以下格式：  1\begin&amp;#123;center&amp;#125;2	\begin&amp;#123;tabular&amp;#125;3        ...4	\end&amp;#123;">
+<meta name="keywords" content="FLIP00 踩坑指南">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于poster, latex-diff, slide的一些坑">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;index.html">
+<meta property="og:site_name" content="Kae的博客">
+<meta property="og:description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐Poster 不能在数学环境和文件路径以外的地方出现未转义的下划线 _ 不能使用 table, figure等浮动体 表格可以使用以下格式：  1\begin&amp;#123;center&amp;#125;2	\begin&amp;#123;tabular&amp;#125;3        ...4	\end&amp;#123;">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
+<meta property="og:updated_time" content="2019-12-01T07:58:57.665Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/01/issues-for-poster-slide-gitlatexdiff/"/>
+
+
+
+
+
+  <title>关于poster, latex-diff, slide的一些坑 | Kae的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="cn">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kae的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/issues-for-poster-slide-gitlatexdiff/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mihara Kae">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kae的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">关于poster, latex-diff, slide的一些坑</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-01T12:17:13+08:00">
+                2019-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%e7%9b%ae%e5%bd%95">目录</a></li>
+<li><a href="#poster">Poster</a></li>
+<li><a href="#git-latexdiff">git latexdiff</a></li>
+<li><a href="#slide">slide</a></li>
+<li><a href="#latex%e7%bc%96%e5%86%99%e7%8e%af%e5%a2%83%e6%8e%a8%e8%8d%90">latex编写环境推荐</a></li>
+<li><a href="#git%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90">git工具推荐</a><h2 id="Poster"><a href="#Poster" class="headerlink" title="Poster"></a>Poster</h2></li>
+<li>不能在数学环境和文件路径以外的地方出现未转义的下划线 <code>_</code></li>
+<li>不能使用 <code>table</code>, <code>figure</code>等浮动体</li>
+<li>表格可以使用以下格式：</li>
+</ul>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">\<span class="name">begin</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">\<span class="name">end</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+
+<ul>
+<li>图片可以使用以下格式：</li>
+</ul>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">\<span class="name">includegraphic</span><span class="string">[width=.3\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+
+<ul>
+<li>可以使用<code>\vspace{.3cm}</code>来调整上下间距，使得海报更整齐美观</li>
+<li>在复制粘贴代码的时候，注意大括号的配对。</li>
+</ul>
+<h2 id="git-latexdiff"><a href="#git-latexdiff" class="headerlink" title="git latexdiff"></a>git latexdiff</h2><ul>
+<li>可以在文档所在的目录下使用<br><code>git latexdiff HEAD~ --main xxx.tex</code> 来生成当前commit与上一次commit的对比。</li>
+<li>生成的文件会保存在<code>%temp%/git-latexdiff.xxx/</code>这个文件夹里，其中<code>xxx</code>是一个随机的数字。</li>
+<li>git latexdiff生成的文档不能正常显示gitinfo的问题：暂时没有什么好办法</li>
+<li>git latexdiff 一直报错：<ul>
+<li>我只能说，爱莫能助╮(╯-╰)╭我自己的git latexdiff也到现在都没有成功运行过<ul>
+<li>但是它还是能正常生成差异pdf，所以我一直没有管</li>
+</ul>
+</li>
+<li>下面是几个<strong>可能</strong>有效的解决方案：<ul>
+<li>在运行<code>git latexdiff</code>时加上参数 <code>--pdf-viewer CMD</code></li>
+<li>新建一个仓库，把所有报告文件添加进去并重新commit(当然，为了对比要修改一下然后再commit一次)</li>
+<li>重启电脑</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="slide"><a href="#slide" class="headerlink" title="slide"></a>slide</h2><ul>
+<li><p>需要使用dvi-&gt;ps-&gt;pdf这样的顺序生成</p>
+<ul>
+<li>具体来说，是<code>latex</code>→<code>dvi2ps</code>→<code>ps2pdf</code></li>
+<li>也许pdflatex也可以, 不过我没试</li>
+</ul>
+</li>
+<li><p>slide模板不支持<code>minipage</code>环境</p>
+</li>
+<li><p>双栏排版可以使用以下格式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">twocolumn</span><span class="string">[</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lfrheight=0.5\slideheight, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    rfrheight=0.2\slideheight, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lineheight=0.5\slideheight,</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lineprop=&#123;linestype=dotted,</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lfrprop=&#123;&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    rfrprop=&#123;&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    topsep=0.1cm]</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">%colum1%</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">%colum2%</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+</li>
+<li><p>其中</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>lfrheight=0.5\slideheight</code></td>
+<td align="left">以指定高度创建包裹左栏的框。去掉则不会创建这个框。</td>
+</tr>
+<tr>
+<td align="left"><code>rfrheight=0.2\slideheight</code></td>
+<td align="left">创建包裹右栏的框，其它同上</td>
+</tr>
+<tr>
+<td align="left"><code>lineheight=0.5\slideheight</code></td>
+<td align="left">创建两栏中间的分隔线</td>
+</tr>
+<tr>
+<td align="left"><code>lineprop={linestype=dotted, linewidth=3pt}</code></td>
+<td align="left">控制分隔线格式</td>
+</tr>
+<tr>
+<td align="left"><code>lfrprop={}</code></td>
+<td align="left">控制左框格式，具体格式同上</td>
+</tr>
+<tr>
+<td align="left"><code>rfrprop={}</code></td>
+<td align="left">控制右框格式，具体格式同上</td>
+</tr>
+<tr>
+<td align="left"><code>topsep=0.1cm</code></td>
+<td align="left">上间距</td>
+</tr>
+</tbody></table>
+<ul>
+<li>下图展示了<code>\twocolumn</code>的一些参数。</li>
+<li>更多控制参数可参考powerdot文档的第6节。该文档可以在texlive或别的什么包管理器里找到。<br><img src="/2019/12/01/issues-for-poster-slide-gitlatexdiff/2019-12-01-14-18-36.png" alt="twocolum命令的更多参数，图截自powerdot文档"></li>
+<li>注：<code>\twocolumn</code>内部并不会自动居中对齐。可以使用<code>\centering</code>, <code>\vspace{.3\slideheight}</code>等命令手动居中。<ul>
+<li>如果你有更好的办法，欢迎留言。</li>
+</ul>
+</li>
+<li>如果只是简单的想把两张图片并排放，可以使用</li>
+</ul>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">\<span class="name">includegraphics</span><span class="string">[width=.4\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">\<span class="name">quad</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="tag">\<span class="name">includegraphics</span><span class="string">[width=.4\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+<h2 id="latex编写环境推荐"><a href="#latex编写环境推荐" class="headerlink" title="latex编写环境推荐"></a>latex编写环境推荐</h2><ul>
+<li>推荐使用vscode编写latex</li>
+<li>工具链的配置可以参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/38178015</a></li>
+<li>另外推荐几个vscode上的latex插件，在左边栏插件搜索名字就能搜到：<ul>
+<li>LaTex Utilities<ul>
+<li>支持直接复制图片、表格到latex里，会自动保存图片并插入模板，以及对表格数据格式化</li>
+<li>更多方便的Snippets</li>
+<li>预览Tikz</li>
+<li>字数统计</li>
+</ul>
+</li>
+<li>latex-formatter<ul>
+<li>格式化tex代码，让心情更舒畅<h2 id="git工具推荐"><a href="#git工具推荐" class="headerlink" title="git工具推荐"></a>git工具推荐</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同样推荐使用vscode管理git仓库<ul>
+<li>左下角可以切换分支</li>
+<li>左侧边栏第三个按钮进去可以commit, push, sync, merge等各种操作</li>
+</ul>
+</li>
+<li>其它插件：<ul>
+<li>GitLens:<ul>
+<li>直接在代码中显示修改记录</li>
+<li>查看文件历史、行历史</li>
+<li>管理分支</li>
+<li>等等</li>
+</ul>
+</li>
+<li>Git log<ul>
+<li>查看git history</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>……当然上面这些功能你装一个smartgit之类的客户端也能实现，甚至更全一些</li>
+<li>但是直接在IDE里管理仓库比较方便嘛</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/FLIP00-%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/" rel="tag"># FLIP00 踩坑指南</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/30/title/" rel="next" title="博客测试">
+                <i class="fa fa-chevron-left"></i> 博客测试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mihara Kae</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:kaemihara@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Poster"><span class="nav-number">2.</span> <span class="nav-text">Poster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-latexdiff"><span class="nav-number">3.</span> <span class="nav-text">git latexdiff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slide"><span class="nav-number">4.</span> <span class="nav-text">slide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex编写环境推荐"><span class="nav-number">5.</span> <span class="nav-text">latex编写环境推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git工具推荐"><span class="nav-number">6.</span> <span class="nav-text">git工具推荐</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mihara Kae</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
