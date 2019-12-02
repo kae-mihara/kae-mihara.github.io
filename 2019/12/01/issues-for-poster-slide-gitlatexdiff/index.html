@@ -91,13 +91,13 @@
 <meta name="description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐">
 <meta name="keywords" content="FLIP00 踩坑指南">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poster, latex-diff, slide的一些坑">
+<meta property="og:title" content="poster, latexdiff, slide的一些坑">
 <meta property="og:url" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;index.html">
 <meta property="og:site_name" content="两只三花">
 <meta property="og:description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐">
 <meta property="og:locale" content="cn">
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
-<meta property="og:updated_time" content="2019-12-01T13:44:12.935Z">
+<meta property="og:updated_time" content="2019-12-02T03:15:18.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>poster, latex-diff, slide的一些坑 | 两只三花</title>
+  <title>poster, latexdiff, slide的一些坑 | 两只三花</title>
   
 
 
@@ -313,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">poster, latex-diff, slide的一些坑</h1>
+          <h1 class="post-title" itemprop="name headline">poster, latexdiff, slide的一些坑</h1>
         
 
         <div class="post-meta">
@@ -390,9 +390,31 @@
 <li>在复制粘贴代码的时候，注意大括号的配对。</li>
 </ul>
 <h2 id="git-latexdiff"><a href="#git-latexdiff" class="headerlink" title="git latexdiff"></a>git latexdiff</h2><ul>
-<li>可以在文档所在的目录下使用<br><code>git latexdiff HEAD~ --main xxx.tex</code> 来生成当前commit与上一次commit的对比。</li>
+<li>可以在文档所在的目录下使用<br><code>git latexdiff HEAD~ --main xxx.tex</code> 来生成当前commit与上一次commit的对比。<ul>
+<li><code>~</code>如果后面跟数字N，表示与N次以前的commit对比</li>
+<li><code>HEAD~1</code>与<code>HEAD~</code>作用相同</li>
+</ul>
+</li>
+<li>更多操作可以参考<a href="http://www.deanbodenham.com/learn/git-and-latexdiff.html" target="_blank" rel="noopener">http://www.deanbodenham.com/learn/git-and-latexdiff.html</a></li>
 <li>生成的文件会保存在<code>%temp%/git-latexdiff.xxx/</code>这个文件夹里，其中<code>xxx</code>是一个随机的数字。</li>
-<li>git latexdiff生成的文档不能正常显示gitinfo的问题：暂时没有什么好办法</li>
+<li>git latexdiff生成的文档不能正常显示gitinfo的问题：<ul>
+<li>（更新）翻阅gitinfo2文档找到了办法：<ul>
+<li><ol>
+<li>将文件<code>/.git/GitHeadInfo.gin</code>复制到tex文件的同一目录下，并改名为<code>GitHeadLocal.gin</code></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>在前言区找到<code>\usepackage{gitinfo2}</code>，添加参数<code>local</code>: <code>\usepackage[local]{gitinfo2}</code></li>
+</ol>
+</li>
+<li><ol start="3">
+<li>commit一次</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>git latexdiff 一直报错：<ul>
 <li>我只能说，爱莫能助╮(╯-╰)╭我自己的git latexdiff也到现在都没有成功运行过<ul>
 <li>但是它还是能正常生成差异pdf，所以我一直没有管</li>
