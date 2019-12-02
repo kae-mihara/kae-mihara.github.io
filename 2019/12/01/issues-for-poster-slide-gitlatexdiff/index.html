@@ -88,16 +88,16 @@
 
 
 
-<meta name="description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐">
+<meta name="description" content="分享flip00用到工具中那些已解决和未解决的坑">
 <meta name="keywords" content="FLIP00 踩坑指南">
 <meta property="og:type" content="article">
 <meta property="og:title" content="poster, latexdiff, slide的一些坑">
 <meta property="og:url" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;index.html">
 <meta property="og:site_name" content="两只三花">
-<meta property="og:description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐">
+<meta property="og:description" content="分享flip00用到工具中那些已解决和未解决的坑">
 <meta property="og:locale" content="cn">
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
-<meta property="og:updated_time" content="2019-12-02T03:45:51.108Z">
+<meta property="og:updated_time" content="2019-12-02T04:07:15.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
 
@@ -363,41 +363,50 @@
       
 
       
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+        <p>分享flip00用到工具中那些已解决和未解决的坑</p>
+<a id="more"></a>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li><a href="#%e7%9b%ae%e5%bd%95">目录</a></li>
-<li><a href="#poster">Poster</a></li>
-<li><a href="#git-latexdiff">git latexdiff</a></li>
-<li><a href="#slide">slide</a></li>
+<li><a href="#poster">Poster</a><ul>
+<li><a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">注意事项</a></li>
+<li><a href="#%e8%a1%a8%e6%a0%bc%e5%8f%82%e8%80%83%e6%a0%bc%e5%bc%8f">表格参考格式：</a></li>
+<li><a href="#%e5%9b%be%e7%89%87%e5%8f%82%e8%80%83%e6%a0%bc%e5%bc%8f">图片参考格式：</a></li>
+</ul>
+</li>
+<li><a href="#git-latexdiff">git latexdiff</a><ul>
+<li><a href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95">使用方法</a></li>
+<li><a href="#git-latexdiff%e7%94%9f%e6%88%90%e7%9a%84%e6%96%87%e6%a1%a3%e4%b8%8d%e8%83%bd%e6%ad%a3%e5%b8%b8%e6%98%be%e7%a4%bagitinfo%e7%9a%84%e9%97%ae%e9%a2%98">git latexdiff生成的文档不能正常显示gitinfo的问题：</a></li>
+<li><a href="#git-latexdiff-%e4%b8%80%e7%9b%b4%e6%8a%a5%e9%94%99">git latexdiff 一直报错：</a></li>
+</ul>
+</li>
+<li><a href="#slide">slide</a><ul>
+<li><a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9-1">注意事项</a></li>
+<li><a href="#%e5%8f%8c%e6%a0%8f%e6%8e%92%e7%89%88%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%e4%bb%a5%e4%b8%8b%e6%a0%bc%e5%bc%8f">双栏排版可以使用以下格式：</a></li>
+</ul>
+</li>
 <li><a href="#latex%e7%bc%96%e5%86%99%e7%8e%af%e5%a2%83%e6%8e%a8%e8%8d%90">latex编写环境推荐</a></li>
 <li><a href="#git%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90">git工具推荐</a></li>
 </ul>
-<a id="more"></a>
-
-<h2 id="Poster"><a href="#Poster" class="headerlink" title="Poster"></a>Poster</h2><ul>
+<h2 id="Poster"><a href="#Poster" class="headerlink" title="Poster"></a>Poster</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>不能在数学环境和文件路径以外的地方出现未转义的下划线 <code>_</code></li>
 <li>不能使用 <code>table</code>, <code>figure</code>等浮动体</li>
-<li>表格可以使用以下格式：</li>
 </ul>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">end</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+<h3 id="表格参考格式："><a href="#表格参考格式：" class="headerlink" title="表格参考格式："></a>表格参考格式：</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">end</span><span class="string">&#123;tabular&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
 
-<ul>
-<li>图片可以使用以下格式：</li>
-</ul>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">includegraphic</span><span class="string">[width=.3\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
+<h3 id="图片参考格式："><a href="#图片参考格式：" class="headerlink" title="图片参考格式："></a>图片参考格式：</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">includegraphic</span><span class="string">[width=.3\linewidth]</span><span class="string">&#123;...&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">\<span class="name">includegraphic</span><span class="string">[width=.3\linewidth]</span><span class="string">&#123;...&#125;</span></span><span class="comment">%并排摆放</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;center&#125;</span></span></span></pre></td></tr></table></figure>
 
 <ul>
 <li>可以使用<code>\vspace{.3cm}</code>来调整上下间距，使得海报更整齐美观</li>
 <li>在复制粘贴代码的时候，注意大括号的配对。</li>
 </ul>
-<h2 id="git-latexdiff"><a href="#git-latexdiff" class="headerlink" title="git latexdiff"></a>git latexdiff</h2><ul>
+<h2 id="git-latexdiff"><a href="#git-latexdiff" class="headerlink" title="git latexdiff"></a>git latexdiff</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
 <li>可以在文档所在的目录下使用<br><code>git latexdiff HEAD~ --main xxx.tex</code> 来生成当前commit与上一次commit的对比。<ul>
 <li><code>~</code>如果后面跟数字N，表示与N次以前的commit对比</li>
 <li><code>HEAD~1</code>与<code>HEAD~</code>作用相同</li>
 </ul>
 </li>
 <li>更多操作可以参考<a href="http://www.deanbodenham.com/learn/git-and-latexdiff.html" target="_blank" rel="noopener">http://www.deanbodenham.com/learn/git-and-latexdiff.html</a></li>
-<li>生成的文件会保存在<code>%temp%/git-latexdiff.xxx/</code>这个文件夹里，其中<code>xxx</code>是一个随机的数字。</li>
-<li>git latexdiff生成的文档不能正常显示gitinfo的问题：<ol>
+<li>生成的文件会保存在<code>%temp%/git-latexdiff.xxx/</code>这个文件夹里，其中<code>xxx</code>是一个随机的数字。<h3 id="git-latexdiff生成的文档不能正常显示gitinfo的问题："><a href="#git-latexdiff生成的文档不能正常显示gitinfo的问题：" class="headerlink" title="git latexdiff生成的文档不能正常显示gitinfo的问题："></a>git latexdiff生成的文档不能正常显示gitinfo的问题：</h3><ol>
 <li>（更新）翻阅gitinfo2文档找到了办法：<ul>
 <li>原理：<code>gitinfo</code>提供了local模式，可以从当前目录读取git信息</li>
 <li>将文件<code>/.git/GitHeadInfo.gin</code>复制到tex文件的同一目录下，并改名为<code>GitHeadLocal.gin</code></li>
@@ -412,10 +421,9 @@
 <li>拿到diff文档之后记得把生成的目录删掉，不然不小心commit到仓库里就麻烦了</li>
 </ul>
 </li>
-<li>两种方法均测试通过。  </li>
+<li>两种方法均测试通过。  <h3 id="git-latexdiff-一直报错："><a href="#git-latexdiff-一直报错：" class="headerlink" title="git latexdiff 一直报错："></a>git latexdiff 一直报错：</h3></li>
 </ol>
-</li>
-<li>git latexdiff 一直报错：<ul>
+<ul>
 <li>我只能说，爱莫能助╮(╯-╰)╭我自己的git latexdiff也到现在都没有成功运行过<ul>
 <li>但是它还是能正常生成差异pdf，所以我一直没有管</li>
 </ul>
@@ -429,14 +437,18 @@
 </ul>
 </li>
 </ul>
-<h2 id="slide"><a href="#slide" class="headerlink" title="slide"></a>slide</h2><ul>
-<li>需要使用dvi-&gt;ps-&gt;pdf这样的顺序生成<ul>
-<li>具体来说，是<code>latex</code>→<code>dvi2ps</code>→<code>ps2pdf</code></li>
-<li>也许pdflatex也可以, 不过我没试</li>
+<h2 id="slide"><a href="#slide" class="headerlink" title="slide"></a>slide</h2><h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>不支持<code>minipage</code>环境</li>
+<li>暂时没有找到插入除eps之外其它格式图片的方法<ul>
+<li>可以使用命令<code>pdf2ps input.pdf outpus.eps</code>转换eps</li>
 </ul>
 </li>
-<li>slide模板不支持<code>minipage</code>环境</li>
-<li>双栏排版可以使用以下格式：</li>
+<li>需要使用dvi-&gt;ps-&gt;pdf这样的顺序生成<ul>
+<li>具体来说，是<code>latex</code>→<code>dvi2ps</code>→<code>ps2pdf</code></li>
+<li>latexmk也可以,效果相同</li>
+<li>pdflatex和xelatex都不行<h3 id="双栏排版可以使用以下格式："><a href="#双栏排版可以使用以下格式：" class="headerlink" title="双栏排版可以使用以下格式："></a>双栏排版可以使用以下格式：</h3></li>
+</ul>
+</li>
 </ul>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">twocolumn</span><span class="string">[</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lfrheight=0.5\slideheight, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    rfrheight=0.2\slideheight, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lineheight=0.5\slideheight,</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lineprop=&#123;linestype=dotted,</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    lfrprop=&#123;&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    rfrprop=&#123;&#125;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">    topsep=0.1cm]</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">%colum1%</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">%colum2%</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
@@ -717,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Poster"><span class="nav-number">2.</span> <span class="nav-text">Poster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-latexdiff"><span class="nav-number">3.</span> <span class="nav-text">git latexdiff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slide"><span class="nav-number">4.</span> <span class="nav-text">slide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex编写环境推荐"><span class="nav-number">5.</span> <span class="nav-text">latex编写环境推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git工具推荐"><span class="nav-number">6.</span> <span class="nav-text">git工具推荐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Poster"><span class="nav-number">2.</span> <span class="nav-text">Poster</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">2.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格参考格式："><span class="nav-number">2.2.</span> <span class="nav-text">表格参考格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片参考格式："><span class="nav-number">2.3.</span> <span class="nav-text">图片参考格式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-latexdiff"><span class="nav-number">3.</span> <span class="nav-text">git latexdiff</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">3.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-latexdiff生成的文档不能正常显示gitinfo的问题："><span class="nav-number">3.2.</span> <span class="nav-text">git latexdiff生成的文档不能正常显示gitinfo的问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-latexdiff-一直报错："><span class="nav-number">3.3.</span> <span class="nav-text">git latexdiff 一直报错：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slide"><span class="nav-number">4.</span> <span class="nav-text">slide</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-1"><span class="nav-number">4.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双栏排版可以使用以下格式："><span class="nav-number">4.2.</span> <span class="nav-text">双栏排版可以使用以下格式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex编写环境推荐"><span class="nav-number">5.</span> <span class="nav-text">latex编写环境推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git工具推荐"><span class="nav-number">6.</span> <span class="nav-text">git工具推荐</span></a></li></ol></div>
             
 
           </div>
