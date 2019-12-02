@@ -100,23 +100,23 @@
 </li>
 <li>更多操作可以参考<a href="http://www.deanbodenham.com/learn/git-and-latexdiff.html" target="_blank" rel="noopener">http://www.deanbodenham.com/learn/git-and-latexdiff.html</a></li>
 <li>生成的文件会保存在<code>%temp%/git-latexdiff.xxx/</code>这个文件夹里，其中<code>xxx</code>是一个随机的数字。</li>
-<li>git latexdiff生成的文档不能正常显示gitinfo的问题：<ul>
+<li>git latexdiff生成的文档不能正常显示gitinfo的问题：<ol>
 <li>（更新）翻阅gitinfo2文档找到了办法：<ul>
-<li><ol>
+<li>原理：<code>gitinfo</code>提供了local模式，可以从当前目录读取git信息</li>
 <li>将文件<code>/.git/GitHeadInfo.gin</code>复制到tex文件的同一目录下，并改名为<code>GitHeadLocal.gin</code></li>
-</ol>
-</li>
-<li><ol start="2">
-<li>在前言区找到<code>\usepackage{gitinfo2}</code>，添加参数<code>local</code>: <code>\usepackage[local]{gitinfo2}</code></li>
-</ol>
-</li>
-<li><ol start="3">
+<li>在前言区找到<code>\usepackage{gitinfo2}</code>, 改为<code>\usepackage[local]{gitinfo2}</code></li>
 <li>commit一次</li>
+<li><strong>注意：</strong>这么做会导致需要每次手动重复步骤<code>1</code>才能为文档更新git信息。</li>
+</ul>
+</li>
+<li>刚把方法1写完我就又想到了方法2<ul>
+<li>将git latexdiff的生成目录指定到仓库里面，这样它就能读到git信息了</li>
+<li>在运行git latexdiff时，加上参数<code>--build-dir .\l</code></li>
+<li>拿到diff文档之后记得把生成的目录删掉，不然不小心commit到仓库里就麻烦了</li>
+</ul>
+</li>
+<li>两种方法均测试通过。  </li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 <li>git latexdiff 一直报错：<ul>
 <li>我只能说，爱莫能助╮(╯-╰)╭我自己的git latexdiff也到现在都没有成功运行过<ul>
