@@ -97,7 +97,7 @@
 <meta property="og:description" content="目录 目录 Poster git latexdiff slide latex编写环境推荐 git工具推荐">
 <meta property="og:locale" content="cn">
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
-<meta property="og:updated_time" content="2019-12-02T03:38:27.521Z">
+<meta property="og:updated_time" content="2019-12-02T03:45:51.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;issues-for-poster-slide-gitlatexdiff&#x2F;2019-12-01-14-18-36.png">
 
@@ -403,12 +403,12 @@
 <li>将文件<code>/.git/GitHeadInfo.gin</code>复制到tex文件的同一目录下，并改名为<code>GitHeadLocal.gin</code></li>
 <li>在前言区找到<code>\usepackage{gitinfo2}</code>, 改为<code>\usepackage[local]{gitinfo2}</code></li>
 <li>commit一次</li>
-<li><strong>注意：</strong>这么做会导致需要每次手动重复步骤<code>1</code>才能为文档更新git信息。</li>
+<li><strong>注意：</strong>这么做会导致需要每次手动复制才能为文档更新git信息。</li>
 </ul>
 </li>
 <li>刚把方法1写完我就又想到了方法2<ul>
 <li>将git latexdiff的生成目录指定到仓库里面，这样它就能读到git信息了</li>
-<li>在运行git latexdiff时，加上参数<code>--build-dir .\l</code></li>
+<li>在运行git latexdiff时，加上参数<code>--tmpdirprefix ./</code></li>
 <li>拿到diff文档之后记得把生成的目录删掉，不然不小心commit到仓库里就麻烦了</li>
 </ul>
 </li>
