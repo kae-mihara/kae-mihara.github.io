@@ -65,12 +65,12 @@
   </entry>
   <entry>
     <title>poster, latexdiff, slide的一些坑</title>
-    <url>/2019/12/01/issues-for-poster-slide-gitlatexdiff/</url>
+    <url>/2019/12/01/trouble-about-flip00/</url>
     <content><![CDATA[<p>分享flip00用到工具中那些已解决和未解决的坑</p>
 <a id="more"></a>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li><a href="#%e7%9b%ae%e5%bd%95">目录</a></li>
-<li><a href="#poster">Poster</a><ul>
+<li><a href="#poster0">Poster0</a><ul>
 <li><a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">注意事项</a></li>
 <li><a href="#%e8%a1%a8%e6%a0%bc%e5%8f%82%e8%80%83%e6%a0%bc%e5%bc%8f">表格参考格式</a></li>
 <li><a href="#%e5%9b%be%e7%89%87%e5%8f%82%e8%80%83%e6%a0%bc%e5%bc%8f">图片参考格式</a></li>
@@ -90,7 +90,7 @@
 <li><a href="#latex%e7%bc%96%e5%86%99%e7%8e%af%e5%a2%83%e6%8e%a8%e8%8d%90">latex编写环境推荐</a></li>
 <li><a href="#git%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90">git工具推荐</a></li>
 </ul>
-<h2 id="Poster"><a href="#Poster" class="headerlink" title="Poster"></a>Poster</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<h2 id="Poster0"><a href="#Poster0" class="headerlink" title="Poster0"></a>Poster0</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>不能在数学环境和文件路径以外的地方出现未转义的下划线 <code>_</code></li>
 <li>不能使用 <code>table</code>, <code>figure</code>等浮动体</li>
 </ul>
@@ -196,7 +196,7 @@
 </tbody></table>
 <ul>
 <li>下图展示了<code>\twocolumn</code>的一些参数。</li>
-<li>更多控制参数可参考powerdot文档的第6节。该文档可以在texlive或别的什么包管理器里找到。<br><img src="/2019/12/01/issues-for-poster-slide-gitlatexdiff/2019-12-01-14-18-36.png" alt="twocolum命令的更多参数，图截自powerdot文档"></li>
+<li>更多控制参数可参考powerdot文档的第6节。该文档可以在texlive或别的什么包管理器里找到。<br><img src="/2019/12/01/trouble-about-flip00/2019-12-01-14-18-36.png" alt="twocolum命令的更多参数，图截自powerdot文档"></li>
 <li>注：<code>\twocolumn</code>内部并不会自动居中对齐。可以使用<code>\centering</code>, <code>\vspace{.3\slideheight}</code>等命令手动居中。<ul>
 <li>如果你有更好的办法，欢迎留言。</li>
 </ul>

@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="cn">
+<html class="theme-next pisces use-motion" lang="cn">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -104,7 +104,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -336,6 +336,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/30/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/11/30/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -417,7 +427,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/01/issues-for-poster-slide-gitlatexdiff/" rel="prev" title="poster, latexdiff, slide的一些坑">
+              <a href="/2019/12/01/trouble-about-flip00/" rel="prev" title="poster, latexdiff, slide的一些坑">
                 poster, latexdiff, slide的一些坑 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -447,6 +457,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -601,7 +618,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -648,9 +665,6 @@
   
 
 
-
-
-  
   
 
 
@@ -658,6 +672,10 @@
 
 
 
+
+
+
+  
 
 
 
@@ -693,12 +711,12 @@
 
   
   
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 
@@ -713,6 +731,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
