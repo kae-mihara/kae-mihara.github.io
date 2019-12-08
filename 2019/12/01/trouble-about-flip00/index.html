@@ -97,7 +97,7 @@
 <meta property="og:description" content="分享flip00用到工具中那些已解决和未解决的坑">
 <meta property="og:locale" content="cn">
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;trouble-about-flip00&#x2F;2019-12-01-14-18-36.png">
-<meta property="og:updated_time" content="2019-12-08T04:28:31.494Z">
+<meta property="og:updated_time" content="2019-12-08T08:37:47.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;01&#x2F;trouble-about-flip00&#x2F;2019-12-01-14-18-36.png">
 
@@ -109,7 +109,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -339,16 +339,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/12/01/trouble-about-flip00/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/12/01/trouble-about-flip00/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -377,7 +367,7 @@
 <a id="more"></a>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li><a href="#%e7%9b%ae%e5%bd%95">目录</a></li>
-<li><a href="#poster0">Poster0</a><ul>
+<li><a href="#poster">Poster</a><ul>
 <li><a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">注意事项</a></li>
 <li><a href="#%e8%a1%a8%e6%a0%bc%e5%8f%82%e8%80%83%e6%a0%bc%e5%bc%8f">表格参考格式</a></li>
 <li><a href="#%e5%9b%be%e7%89%87%e5%8f%82%e8%80%83%e6%a0%bc%e5%bc%8f">图片参考格式</a></li>
@@ -397,7 +387,7 @@
 <li><a href="#latex%e7%bc%96%e5%86%99%e7%8e%af%e5%a2%83%e6%8e%a8%e8%8d%90">latex编写环境推荐</a></li>
 <li><a href="#git%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90">git工具推荐</a></li>
 </ul>
-<h2 id="Poster0"><a href="#Poster0" class="headerlink" title="Poster0"></a>Poster0</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<h2 id="Poster"><a href="#Poster" class="headerlink" title="Poster"></a>Poster</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>不能在数学环境和文件路径以外的地方出现未转义的下划线 <code>_</code></li>
 <li>不能使用 <code>table</code>, <code>figure</code>等浮动体</li>
 </ul>
@@ -450,11 +440,11 @@
 <h2 id="slide"><a href="#slide" class="headerlink" title="slide"></a>slide</h2><h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>不支持<code>minipage</code>环境</li>
 <li>暂时没有找到插入除eps之外其它格式图片的方法<ul>
-<li>可以使用命令<code>pdf2ps input.pdf outpus.eps</code>转换eps</li>
+<li>可以使用命令<code>pdf2ps input.pdf output.eps</code>转换eps</li>
 </ul>
 </li>
 <li>需要使用dvi-&gt;ps-&gt;pdf这样的顺序生成<ul>
-<li>具体来说，是<code>latex</code>→<code>dvi2ps</code>→<code>ps2pdf</code></li>
+<li>具体来说，是<code>latex</code>→<code>dvips</code>→<code>ps2pdf</code></li>
 <li>latexmk也可以,效果相同</li>
 <li>pdflatex和xelatex都不行</li>
 </ul>
@@ -625,13 +615,6 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
-  
 
 
 
@@ -746,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Poster0"><span class="nav-number">2.</span> <span class="nav-text">Poster0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">2.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格参考格式"><span class="nav-number">2.2.</span> <span class="nav-text">表格参考格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片参考格式"><span class="nav-number">2.3.</span> <span class="nav-text">图片参考格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-latexdiff"><span class="nav-number">3.</span> <span class="nav-text">git latexdiff</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">3.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-latexdiff生成的文档不能正常显示gitinfo的问题"><span class="nav-number">3.2.</span> <span class="nav-text">git latexdiff生成的文档不能正常显示gitinfo的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-latexdiff-一直报错"><span class="nav-number">3.3.</span> <span class="nav-text">git latexdiff 一直报错</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slide"><span class="nav-number">4.</span> <span class="nav-text">slide</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-1"><span class="nav-number">4.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双栏排版可以使用以下格式"><span class="nav-number">4.2.</span> <span class="nav-text">双栏排版可以使用以下格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex编写环境推荐"><span class="nav-number">5.</span> <span class="nav-text">latex编写环境推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git工具推荐"><span class="nav-number">6.</span> <span class="nav-text">git工具推荐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Poster"><span class="nav-number">2.</span> <span class="nav-text">Poster</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">2.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格参考格式"><span class="nav-number">2.2.</span> <span class="nav-text">表格参考格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片参考格式"><span class="nav-number">2.3.</span> <span class="nav-text">图片参考格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-latexdiff"><span class="nav-number">3.</span> <span class="nav-text">git latexdiff</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">3.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-latexdiff生成的文档不能正常显示gitinfo的问题"><span class="nav-number">3.2.</span> <span class="nav-text">git latexdiff生成的文档不能正常显示gitinfo的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-latexdiff-一直报错"><span class="nav-number">3.3.</span> <span class="nav-text">git latexdiff 一直报错</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slide"><span class="nav-number">4.</span> <span class="nav-text">slide</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-1"><span class="nav-number">4.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双栏排版可以使用以下格式"><span class="nav-number">4.2.</span> <span class="nav-text">双栏排版可以使用以下格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex编写环境推荐"><span class="nav-number">5.</span> <span class="nav-text">latex编写环境推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git工具推荐"><span class="nav-number">6.</span> <span class="nav-text">git工具推荐</span></a></li></ol></div>
             
 
           </div>
