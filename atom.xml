@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sanhuax2.xyz/"/>
-  <updated>2019-12-18T06:30:34.077Z</updated>
+  <updated>2019-12-18T06:41:49.431Z</updated>
   <id>http://blog.sanhuax2.xyz/</id>
   
   <author>
@@ -21,22 +21,13 @@
     <link href="http://blog.sanhuax2.xyz/2019/12/18/numrew/"/>
     <id>http://blog.sanhuax2.xyz/2019/12/18/numrew/</id>
     <published>2019-12-18T06:09:42.000Z</published>
-    <updated>2019-12-18T06:30:34.077Z</updated>
+    <updated>2019-12-18T06:41:49.431Z</updated>
     
-    <content type="html"><![CDATA[<blockquote class="pullquote mindmap mindmap-lg"><ul><li>[数值计算]<ul><li>基础知识<ul><li>了解误差及其主要来源，误差估计<ul><li>模型误差</li><li>观测误差</li><li>截断误差</li><li>舍入误差</li></ul></li><li>误差，有效数字<ul><li>绝对误差/绝对误差限</li><li>相对误差/相对误差限</li><li>有效数字</li><li>有效数字和绝对/相对误差的关系</li></ul></li><li>算法及其稳定性，设计算法遵循的原则<ul><li>选用数值稳定的计算公式，控制舍入误差的传播</li><li>尽量简化计算步骤，减少运算次数</li><li>尽量避免两个相近的数相减</li><li>绝对值太小的数不宜作除数</li><li>合理安排运算顺序，防止大数吃小数</li></ul></li></ul></li><li>线性方程组的数值解法<ul><li>消元法<ul><li>Gauss消元法</li><li>主元消元法</li></ul></li><li>矩阵的三角分解<ul><li>LU分解</li><li>平方根法（Cholesky分解）</li><li>追赶法</li></ul></li><li>迭代法<ul><li>基本思想</li><li>Jacobi迭代法</li><li>Gauss-Seidel迭代法</li></ul></li><li>掌握向量与矩阵的范数及其性质，迭代法的收敛性及其判定</li></ul></li><li>非线性方程组的数值解法<ul><li>掌握一般迭代法的基本思想及其收敛性判定</li><li>掌握Newton切线法、弦截法，用它们求方程近似根的方法</li></ul></li><li>插值法<ul><li>代数插值问题及其解存在唯一性,Lagrange插值多项式构造及其余项，插值基函数性质</li><li>差商的概念及其性质。Newton插值多项式构造，两种插值法之间的区别与联系</li></ul></li><li>数值微积分<ul><li>了解数值求积基本思想</li><li>掌握Newton-Cotes公式（梯形公式、Simpson公式、Cotes公式）推导及误差；</li><li>了解Romberg求积公式原理</li><li>掌握代数精确度的概念，高斯型求积公式</li><li>了解数值微分的方法</li></ul></li><li>常微分方程数值解<ul><li>掌握Euler方法（Euler公式、梯形公式、Euler预估-校正公式）、局部阶段误差、公式的阶</li><li>了解Runge-Kutta方法的基本思想及四阶经典Runge-Kutta公式</li><li>掌握线性多步方法的原理与公式推导</li></ul></li></ul></li></ul></blockquote><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<p>测试一下思维导图插件<br><a href="https://zhuanlan.zhihu.com/p/75467441" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/75467441</a></p><a id="more"></a><blockquote class="pullquote mindmap mindmap-lg"><ul><li>[数值计算]<ul><li>基础知识<ul><li>了解误差及其主要来源，误差估计<ul><li>模型误差</li><li>观测误差</li><li>截断误差</li><li>舍入误差</li></ul></li><li>误差，有效数字<ul><li>绝对误差/绝对误差限</li><li>相对误差/相对误差限</li><li>有效数字</li><li>有效数字和绝对/相对误差的关系</li></ul></li><li>算法及其稳定性，设计算法遵循的原则<ul><li>选用数值稳定的计算公式，控制舍入误差的传播</li><li>尽量简化计算步骤，减少运算次数</li><li>尽量避免两个相近的数相减</li><li>绝对值太小的数不宜作除数</li><li>合理安排运算顺序，防止大数吃小数</li></ul></li></ul></li><li>线性方程组的数值解法<ul><li>消元法<ul><li>Gauss消元法</li><li>主元消元法</li></ul></li><li>矩阵的三角分解<ul><li>LU分解</li><li>平方根法（Cholesky分解）</li><li>追赶法</li></ul></li><li>迭代法<ul><li>基本思想</li><li>Jacobi迭代法</li><li>Gauss-Seidel迭代法</li></ul></li><li>掌握向量与矩阵的范数及其性质，迭代法的收敛性及其判定</li></ul></li><li>非线性方程组的数值解法<ul><li>掌握一般迭代法的基本思想及其收敛性判定</li><li>掌握Newton切线法、弦截法，用它们求方程近似根的方法</li></ul></li><li>插值法<ul><li>代数插值问题及其解存在唯一性,Lagrange插值多项式构造及其余项，插值基函数性质</li><li>差商的概念及其性质。Newton插值多项式构造，两种插值法之间的区别与联系</li></ul></li><li>数值微积分<ul><li>了解数值求积基本思想</li><li>掌握Newton-Cotes公式（梯形公式、Simpson公式、Cotes公式）推导及误差；</li><li>了解Romberg求积公式原理</li><li>掌握代数精确度的概念，高斯型求积公式</li><li>了解数值微分的方法</li></ul></li><li>常微分方程数值解<ul><li>掌握Euler方法（Euler公式、梯形公式、Euler预估-校正公式）、局部阶段误差、公式的阶</li><li>了解Runge-Kutta方法的基本思想及四阶经典Runge-Kutta公式</li><li>掌握线性多步方法的原理与公式推导</li></ul></li></ul></li></ul></blockquote><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote class=&quot;pullquote mindmap mindmap-lg&quot;&gt;&lt;ul&gt;
-&lt;li&gt;[数值计算]&lt;ul&gt;
-&lt;li&gt;基础知识&lt;ul&gt;
-&lt;li&gt;了解误差及其主要来源，误差估计&lt;ul&gt;
-&lt;li&gt;模型误差&lt;/li&gt;
-&lt;li&gt;观测误差&lt;/li&gt;
-&lt;li&gt;截断
-      
+      &lt;p&gt;测试一下思维导图插件&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/75467441&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zhuanlan.zhihu.com/p/75467441&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
