@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="复习笔记," />
 
 
 
@@ -88,13 +88,15 @@
 
 
 
-<meta name="description" content="死宅 夜猫子 ns玩家 b站萌新up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="两只三花">
-<meta property="og:url" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
+<meta name="description" content="[数值计算] 基础知识 了解误差及其主要来源，误差估计 模型误差 观测误差 截断误差 舍入误差   误差，有效数字 绝对误差&#x2F;绝对误差限 相对误差&#x2F;相对误差限 有效数字 有效数字和绝对&#x2F;相对误差的关系   算法及其稳定性，设计算法遵循的原则 选用数值稳定的计算公式，控制舍入误差的传播 尽量简化计算步骤，减少运算次数 尽量避免两个相近的数相减 绝对值太小的数不宜作除数 合理安排运算顺序，防止大数吃">
+<meta name="keywords" content="复习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数值计算复习">
+<meta property="og:url" content="http:&#x2F;&#x2F;blog.sanhuax2.xyz&#x2F;2019&#x2F;12&#x2F;18&#x2F;numrew&#x2F;index.html">
 <meta property="og:site_name" content="两只三花">
-<meta property="og:description" content="死宅 夜猫子 ns玩家 b站萌新up">
+<meta property="og:description" content="[数值计算] 基础知识 了解误差及其主要来源，误差估计 模型误差 观测误差 截断误差 舍入误差   误差，有效数字 绝对误差&#x2F;绝对误差限 相对误差&#x2F;相对误差限 有效数字 有效数字和绝对&#x2F;相对误差的关系   算法及其稳定性，设计算法遵循的原则 选用数值稳定的计算公式，控制舍入误差的传播 尽量简化计算步骤，减少运算次数 尽量避免两个相近的数相减 绝对值太小的数不宜作除数 合理安排运算顺序，防止大数吃">
 <meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-12-18T06:17:48.718Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.sanhuax2.xyz/archives/2019/12/"/>
+  <link rel="canonical" href="http://blog.sanhuax2.xyz/2019/12/18/numrew/"/>
 
 
 
 
 
-  <title>Archive | 两只三花</title>
+  <title>数值计算复习 | 两只三花</title>
   
 
 
@@ -150,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,148 +280,223 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.sanhuax2.xyz/2019/12/18/numrew/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mihara kae">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="两只三花">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">数值计算复习</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-18T14:09:42+08:00">
+                2019-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 5 posts in total. Keep on posting.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/18/numrew/" itemprop="url">
-              
-                <span itemprop="name">数值计算复习</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-18T14:09:42+08:00"
-              content="2019-12-18" >
-          12-18
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/01/v2ray-tool-chain/" itemprop="url">
-              
-                <span itemprop="name">自己动手搭建v2ray代理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-01T22:17:41+08:00"
-              content="2019-12-01" >
-          12-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/01/trouble-about-flip00/" itemprop="url">
-              
-                <span itemprop="name">poster, latexdiff, slide的一些坑</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-01T12:17:13+08:00"
-              content="2019-12-01" >
-          12-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
+        <blockquote class="pullquote mindmap numrew-md"><ul>
+<li>[数值计算]<ul>
+<li>基础知识<ul>
+<li>了解误差及其主要来源，误差估计<ul>
+<li>模型误差</li>
+<li>观测误差</li>
+<li>截断误差</li>
+<li>舍入误差</li>
+</ul>
+</li>
+<li>误差，有效数字<ul>
+<li>绝对误差/绝对误差限</li>
+<li>相对误差/相对误差限</li>
+<li>有效数字</li>
+<li>有效数字和绝对/相对误差的关系</li>
+</ul>
+</li>
+<li>算法及其稳定性，设计算法遵循的原则<ul>
+<li>选用数值稳定的计算公式，控制舍入误差的传播</li>
+<li>尽量简化计算步骤，减少运算次数</li>
+<li>尽量避免两个相近的数相减</li>
+<li>绝对值太小的数不宜作除数</li>
+<li>合理安排运算顺序，防止大数吃小数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>线性方程组的数值解法<ul>
+<li>消元法<ul>
+<li>Gauss消元法</li>
+<li>主元消元法</li>
+</ul>
+</li>
+<li>矩阵的三角分解<ul>
+<li>LU分解</li>
+<li>平方根法（Cholesky分解）</li>
+<li>追赶法</li>
+</ul>
+</li>
+<li>迭代法<ul>
+<li>基本思想</li>
+<li>Jacobi迭代法</li>
+<li>Gauss-Seidel迭代法</li>
+</ul>
+</li>
+<li>掌握向量与矩阵的范数及其性质，迭代法的收敛性及其判定</li>
+</ul>
+</li>
+<li>非线性方程组的数值解法<ul>
+<li>掌握一般迭代法的基本思想及其收敛性判定</li>
+<li>掌握Newton切线法、弦截法，用它们求方程近似根的方法</li>
+</ul>
+</li>
+<li>插值法<ul>
+<li>代数插值问题及其解存在唯一性,Lagrange插值多项式构造及其余项，插值基函数性质</li>
+<li>差商的概念及其性质。Newton插值多项式构造，两种插值法之间的区别与联系</li>
+</ul>
+</li>
+<li>数值微积分<ul>
+<li>了解数值求积基本思想</li>
+<li>掌握Newton-Cotes公式（梯形公式、Simpson公式、Cotes公式）推导及误差；</li>
+<li>了解Romberg求积公式原理</li>
+<li>掌握代数精确度的概念，高斯型求积公式</li>
+<li>了解数值微分的方法</li>
+</ul>
+</li>
+<li>常微分方程数值解<ul>
+<li>掌握Euler方法（Euler公式、梯形公式、Euler预估-校正公式）、局部阶段误差、公式的阶</li>
+<li>了解Runge-Kutta方法的基本思想及四阶经典Runge-Kutta公式</li>
+<li>掌握线性多步方法的原理与公式推导</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 复习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/01/v2ray-tool-chain/" rel="next" title="自己动手搭建v2ray代理">
+                <i class="fa fa-chevron-left"></i> 自己动手搭建v2ray代理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -427,6 +504,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -660,6 +741,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

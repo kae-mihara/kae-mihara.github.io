@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数值计算复习</title>
+    <url>/2019/12/18/numrew/</url>
+    <content><![CDATA[<blockquote class="pullquote mindmap numrew-md"><ul>
+<li>[数值计算]<ul>
+<li>基础知识<ul>
+<li>了解误差及其主要来源，误差估计<ul>
+<li>模型误差</li>
+<li>观测误差</li>
+<li>截断误差</li>
+<li>舍入误差</li>
+</ul>
+</li>
+<li>误差，有效数字<ul>
+<li>绝对误差/绝对误差限</li>
+<li>相对误差/相对误差限</li>
+<li>有效数字</li>
+<li>有效数字和绝对/相对误差的关系</li>
+</ul>
+</li>
+<li>算法及其稳定性，设计算法遵循的原则<ul>
+<li>选用数值稳定的计算公式，控制舍入误差的传播</li>
+<li>尽量简化计算步骤，减少运算次数</li>
+<li>尽量避免两个相近的数相减</li>
+<li>绝对值太小的数不宜作除数</li>
+<li>合理安排运算顺序，防止大数吃小数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>线性方程组的数值解法<ul>
+<li>消元法<ul>
+<li>Gauss消元法</li>
+<li>主元消元法</li>
+</ul>
+</li>
+<li>矩阵的三角分解<ul>
+<li>LU分解</li>
+<li>平方根法（Cholesky分解）</li>
+<li>追赶法</li>
+</ul>
+</li>
+<li>迭代法<ul>
+<li>基本思想</li>
+<li>Jacobi迭代法</li>
+<li>Gauss-Seidel迭代法</li>
+</ul>
+</li>
+<li>掌握向量与矩阵的范数及其性质，迭代法的收敛性及其判定</li>
+</ul>
+</li>
+<li>非线性方程组的数值解法<ul>
+<li>掌握一般迭代法的基本思想及其收敛性判定</li>
+<li>掌握Newton切线法、弦截法，用它们求方程近似根的方法</li>
+</ul>
+</li>
+<li>插值法<ul>
+<li>代数插值问题及其解存在唯一性,Lagrange插值多项式构造及其余项，插值基函数性质</li>
+<li>差商的概念及其性质。Newton插值多项式构造，两种插值法之间的区别与联系</li>
+</ul>
+</li>
+<li>数值微积分<ul>
+<li>了解数值求积基本思想</li>
+<li>掌握Newton-Cotes公式（梯形公式、Simpson公式、Cotes公式）推导及误差；</li>
+<li>了解Romberg求积公式原理</li>
+<li>掌握代数精确度的概念，高斯型求积公式</li>
+<li>了解数值微分的方法</li>
+</ul>
+</li>
+<li>常微分方程数值解<ul>
+<li>掌握Euler方法（Euler公式、梯形公式、Euler预估-校正公式）、局部阶段误差、公式的阶</li>
+<li>了解Runge-Kutta方法的基本思想及四阶经典Runge-Kutta公式</li>
+<li>掌握线性多步方法的原理与公式推导</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <tags>
+        <tag>复习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自己动手搭建v2ray代理</title>
     <url>/2019/12/01/v2ray-tool-chain/</url>
     <content><![CDATA[<p>本笔记于今年年初记于我的onenote上，参考：<a href="https://www.4spaces.org/v2ray-nginx-tls-websocket/" target="_blank" rel="noopener">https://www.4spaces.org/v2ray-nginx-tls-websocket/</a><br>现在把它搬到blog上。</p>
@@ -58,7 +143,7 @@
 </li>
 </ul>
 <h2 id="启用Google-bbr-tcp拥塞控制算法"><a href="#启用Google-bbr-tcp拥塞控制算法" class="headerlink" title="启用Google bbr tcp拥塞控制算法"></a>启用Google bbr tcp拥塞控制算法</h2><p>哎呀在网上随便找个脚本解决了吧 总有一个能用的</p>
-]]></content>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <tags>
         <tag>科学上网</tag>
       </tags>
@@ -246,7 +331,7 @@
 <li>……当然上面这些功能你装一个smartgit之类的客户端也能实现，甚至更全一些</li>
 <li>但是直接在IDE里管理仓库比较方便嘛</li>
 </ul>
-]]></content>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <tags>
         <tag>FLIP00 踩坑指南</tag>
       </tags>
@@ -277,7 +362,7 @@
 <li>世界各国经济发展经验表明，实体经济强，国家经济强。</li>
 <li>实体经济发展事关我国建设xdhjjtx的未来及经济国竞争力的提高，事关能否顺利实现“两个一百年”奋斗标。<br>（结合材料）</li>
 </ul>
-]]></content>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -297,6 +382,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
   </entry>
 </search>
