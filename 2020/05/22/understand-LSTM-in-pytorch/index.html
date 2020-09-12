@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="LSTM, pytorch," />
 
 
 
@@ -88,14 +88,17 @@
 
 
 
-<meta name="description" content="死宅 夜猫子 ns玩家 b站萌新up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="两只三花">
-<meta property="og:url" content="http://blog.sanhuax2.xyz/archives/2019/12/index.html">
+<meta name="description" content="LSTM原理关于LSTM的原理，已经有了很多优秀的资料，这里不再赘述。 请参考：$$\begin{array}{l}i_{t}&#x3D;\sigma\left(W_{i i} x_{t}+b_{i i}+W_{h i} h_{t-1}+b_{h i}\right) \f_{t}&#x3D;\sigma\left(W_{i f} x_{t}+b_{i f}+W_{h f} h_{t-1}+b_{h f}\right)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解pytorch中的LSTM">
+<meta property="og:url" content="http://blog.sanhuax2.xyz/2020/05/22/understand-LSTM-in-pytorch/index.html">
 <meta property="og:site_name" content="两只三花">
-<meta property="og:description" content="死宅 夜猫子 ns玩家 b站萌新up">
+<meta property="og:description" content="LSTM原理关于LSTM的原理，已经有了很多优秀的资料，这里不再赘述。 请参考：$$\begin{array}{l}i_{t}&#x3D;\sigma\left(W_{i i} x_{t}+b_{i i}+W_{h i} h_{t-1}+b_{h i}\right) \f_{t}&#x3D;\sigma\left(W_{i f} x_{t}+b_{i f}+W_{h f} h_{t-1}+b_{h f}\right)">
 <meta property="og:locale" content="cn">
+<meta property="article:published_time" content="2020-05-22T05:46:00.000Z">
+<meta property="article:modified_time" content="2020-05-22T08:48:03.776Z">
 <meta property="article:author" content="mihara kae">
+<meta property="article:tag" content="LSTM, pytorch">
 <meta name="twitter:card" content="summary">
 
 
@@ -126,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.sanhuax2.xyz/archives/2019/12/"/>
+  <link rel="canonical" href="http://blog.sanhuax2.xyz/2020/05/22/understand-LSTM-in-pytorch/"/>
 
 
 
 
 
-  <title>Archive | 两只三花</title>
+  <title>理解pytorch中的LSTM | 两只三花</title>
   
 
 
@@ -151,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,148 +282,173 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.sanhuax2.xyz/2020/05/22/understand-LSTM-in-pytorch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mihara kae">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="两只三花">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">理解pytorch中的LSTM</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-22T13:46:00+08:00">
+                2020-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 7 posts in total. Keep on posting.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/18/numrew/" itemprop="url">
-              
-                <span itemprop="name">数值计算复习</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-18T14:09:42+08:00"
-              content="2019-12-18" >
-          12-18
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/01/v2ray-tool-chain/" itemprop="url">
-              
-                <span itemprop="name">自己动手搭建v2ray代理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-01T22:17:41+08:00"
-              content="2019-12-01" >
-          12-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/01/trouble-about-flip00/" itemprop="url">
-              
-                <span itemprop="name">poster, latexdiff, slide的一些坑</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-01T12:17:13+08:00"
-              content="2019-12-01" >
-          12-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
+        <h2 id="LSTM原理"><a href="#LSTM原理" class="headerlink" title="LSTM原理"></a>LSTM原理</h2><p>关于LSTM的原理，已经有了很多优秀的资料，这里不再赘述。</p>
+<p>请参考：<br>$$<br>\begin{array}{l}<br>i_{t}=\sigma\left(W_{i i} x_{t}+b_{i i}+W_{h i} h_{t-1}+b_{h i}\right) \<br>f_{t}=\sigma\left(W_{i f} x_{t}+b_{i f}+W_{h f} h_{t-1}+b_{h f}\right) \<br>g_{t}=\tanh \left(W_{i g} x_{t}+b_{i g}+W_{h g} h_{t-1}+b_{h g}\right) \<br>o_{t}=\sigma\left(W_{i o} x_{t}+b_{i o}+W_{h o} h_{t-1}+b_{h o}\right) \<br>c_{t}=f_{t} \odot c_{t-1}+i_{t} \odot g_{t} \<br>h_{t}=o_{t} \odot \tanh \left(c_{t}\right)<br>\end{array}<br>$$</p>
+<h2 id="pytorch-nn-LSTMCell"><a href="#pytorch-nn-LSTMCell" class="headerlink" title="pytorch.nn.LSTMCell"></a>pytorch.nn.LSTMCell</h2><p>官方文档：<a href="https://pytorch.org/docs/master/generated/torch.nn.LSTMCell.html" target="_blank" rel="noopener">https://pytorch.org/docs/master/generated/torch.nn.LSTMCell.html</a></p>
+<p>LSTMCell是一个LSTM单元。</p>
+<p>虽然说是一个单元，但是它并不是一个neural，而是一个完整的神经网络层哦。只不过对于LSTM来说，只有一层没什么用处，必须要在时间/序列方向叠加多个这样的Cell，才能发挥出它的作用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">torch</span>.<span class="title">nn</span>.<span class="title">LSTMCell</span><span class="params">(input_size, hidden_size, bias=True)</span></span></span><br></pre></td></tr></table></figure>
 
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>input_size</td>
+<td>input x的维数</td>
+</tr>
+<tr>
+<td>hidden_size</td>
+<td>隐层状态的维数</td>
+</tr>
+<tr>
+<td>bias</td>
+<td>隐层状态是否带bias，默认为true</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LSTM-pytorch/" rel="tag"># LSTM, pytorch</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/06/intro-to-colab/" rel="next" title="Google Colaboratory介绍">
+                <i class="fa fa-chevron-left"></i> Google Colaboratory介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -428,6 +456,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -448,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -521,6 +562,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LSTM原理"><span class="nav-number">1.</span> <span class="nav-text">LSTM原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytorch-nn-LSTMCell"><span class="nav-number">2.</span> <span class="nav-text">pytorch.nn.LSTMCell</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -661,6 +718,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

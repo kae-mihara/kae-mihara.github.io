@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sanhuax2.xyz/"/>
-  <updated>2019-12-22T09:59:55.728Z</updated>
+  <updated>2020-05-22T08:48:03.776Z</updated>
   <id>http://blog.sanhuax2.xyz/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解pytorch中的LSTM</title>
+    <link href="http://blog.sanhuax2.xyz/2020/05/22/understand-LSTM-in-pytorch/"/>
+    <id>http://blog.sanhuax2.xyz/2020/05/22/understand-LSTM-in-pytorch/</id>
+    <published>2020-05-22T05:46:00.000Z</published>
+    <updated>2020-05-22T08:48:03.776Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="LSTM原理"><a href="#LSTM原理" class="headerlink" title="LSTM原理"></a>LSTM原理</h2><p>关于LSTM的原理，已经有了很多优秀的资料，这里不再赘述。</p><p>请参考：<br>$$<br>\begin{array}{l}<br>i_{t}=\sigma\left(W_{i i} x_{t}+b_{i i}+W_{h i} h_{t-1}+b_{h i}\right) \<br>f_{t}=\sigma\left(W_{i f} x_{t}+b_{i f}+W_{h f} h_{t-1}+b_{h f}\right) \<br>g_{t}=\tanh \left(W_{i g} x_{t}+b_{i g}+W_{h g} h_{t-1}+b_{h g}\right) \<br>o_{t}=\sigma\left(W_{i o} x_{t}+b_{i o}+W_{h o} h_{t-1}+b_{h o}\right) \<br>c_{t}=f_{t} \odot c_{t-1}+i_{t} \odot g_{t} \<br>h_{t}=o_{t} \odot \tanh \left(c_{t}\right)<br>\end{array}<br>$$</p><h2 id="pytorch-nn-LSTMCell"><a href="#pytorch-nn-LSTMCell" class="headerlink" title="pytorch.nn.LSTMCell"></a>pytorch.nn.LSTMCell</h2><p>官方文档：<a href="https://pytorch.org/docs/master/generated/torch.nn.LSTMCell.html" target="_blank" rel="noopener">https://pytorch.org/docs/master/generated/torch.nn.LSTMCell.html</a></p><p>LSTMCell是一个LSTM单元。</p><p>虽然说是一个单元，但是它并不是一个neural，而是一个完整的神经网络层哦。只不过对于LSTM来说，只有一层没什么用处，必须要在时间/序列方向叠加多个这样的Cell，才能发挥出它的作用。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">torch</span>.<span class="title">nn</span>.<span class="title">LSTMCell</span><span class="params">(input_size, hidden_size, bias=True)</span></span></span><br></pre></td></tr></table></figure><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>input_size</td><td>input x的维数</td></tr><tr><td>hidden_size</td><td>隐层状态的维数</td></tr><tr><td>bias</td><td>隐层状态是否带bias，默认为true</td></tr></tbody></table><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;LSTM原理&quot;&gt;&lt;a href=&quot;#LSTM原理&quot; class=&quot;headerlink&quot; title=&quot;LSTM原理&quot;&gt;&lt;/a&gt;LSTM原理&lt;/h2&gt;&lt;p&gt;关于LSTM的原理，已经有了很多优秀的资料，这里不再赘述。&lt;/p&gt;
+&lt;p&gt;请参考：&lt;br&gt;$$&lt;br&gt;\be
+      
+    
+    </summary>
+    
+    
+    
+      <category term="LSTM, pytorch" scheme="http://blog.sanhuax2.xyz/tags/LSTM-pytorch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google Colaboratory介绍</title>
+    <link href="http://blog.sanhuax2.xyz/2020/01/06/intro-to-colab/"/>
+    <id>http://blog.sanhuax2.xyz/2020/01/06/intro-to-colab/</id>
+    <published>2020-01-06T09:18:25.000Z</published>
+    <updated>2020-09-12T09:39:40.207Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>有钱学校的孩子可以用自家实验室的服务器</em><br><em>没钱学校的有钱孩子可以自己买服务器</em><br><em>没钱学校的没钱孩子只能去白嫖免费GPU</em></p><p>链接：<a href="https://colab.research.google.com/" target="_blank" rel="noopener">https://colab.research.google.com/</a><br><a href="https://www.cnblogs.com/zgqcn/p/11186406.html" target="_blank" rel="noopener">https://www.cnblogs.com/zgqcn/p/11186406.html</a></p><h2 id="使用Colab的必要条件"><a href="#使用Colab的必要条件" class="headerlink" title="使用Colab的必要条件"></a>使用Colab的必要条件</h2><ul><li>一个科学上网工具</li><li>一个Google Account</li><li>一个没钱学校的没钱孩子</li></ul><h2 id="Colab的主要问题"><a href="#Colab的主要问题" class="headerlink" title="Colab的主要问题"></a>Colab的主要问题</h2><ul><li>只能打开ipynb</li><li>每次都要挂载Google Drive</li><li>可以从Google Drive打开，但是不能直接import同一目录下的py文件/module</li></ul><h2 id="Colab的使用方式"><a href="#Colab的使用方式" class="headerlink" title="Colab的使用方式"></a>Colab的使用方式</h2><ol start="0"><li>如何选择GPU/TPU<ul><li>修改-&gt;笔记本设置-&gt;硬件加速选GPU/TPU</li></ul></li><li>和Google Drive协同<ul><li>打开Colab，挂载Google Drive</li><li>在Google Drive里创建一个colab的工作目录，随便叫什么名字，方便放东西<ul><li>如果点击”文件-&gt;将副本保存到云端硬盘”，会自动创建名为”Colab Notebooks”的工作目录。</li></ul></li><li>然后就可以把工程文件 笔记本文件什么的扔进去</li></ul></li><li>和Github协同<ul><li>打开Github中的文件：文件-&gt;打开-&gt;Github-&gt;打开ipynb</li><li>保存到Github：文件-&gt;在Github中保存一份副本</li></ul></li><li>在Colab中运行python文件的方法<ul><li>在单元格内输入<code>!python xxx.py</code>，运行单元格</li><li>每次打开笔记本都需要安装缺少的package。大部分常用包已经有了。</li></ul></li><li>离线下载、和OneDrive协同（这一条其实和Colab已经关系不大了hhh）<ul><li>可以在Colab的笔记本中使用<code>%cd</code>, <code>%ls</code>, <code>!mv</code>等命令管理文件</li><li>也可以在左边目录直接拿鼠标拖</li><li>离线下载：可以使用<code>!wget -c url</code>命令把文件下载到当前目录中</li><li>获取OneDrive中的文件：OneDrive分享链接可以通过把分享链接中的1drv.ms变为1drv.ws来获取下载直链。事实上，这是一个第三方提供的直链解析服务。</li><li>把文件转存到OneDrive：可以通过多网盘同步工具Koofr来实现。实际上上一条也能用这个实现。</li><li>因为OneDrive国内可以直接访问，把文件转存到OneDrive之后就可以拿到直链然后多线程下载到自己电脑了。</li></ul></li></ol><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;em&gt;有钱学校的孩子可以用自家实验室的服务器&lt;/em&gt;&lt;br&gt;&lt;em&gt;没钱学校的有钱孩子可以自己买服务器&lt;/em&gt;&lt;br&gt;&lt;em&gt;没钱学校的没钱孩子只能去白嫖免费GPU&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://colab.research.goog
+      
+    
+    </summary>
+    
+    
+    
+      <category term="免费GPU资源" scheme="http://blog.sanhuax2.xyz/tags/%E5%85%8D%E8%B4%B9GPU%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
   
   <entry>
     <title>数值计算复习</title>
