@@ -75,12 +75,10 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="FLIP00 踩坑指南," />
 
 
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="两只三花" type="application/atom+xml" />
@@ -90,16 +88,17 @@
 
 
 
-<meta name="description" content="还没想好(&#x2F;▽＼)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About me">
-<meta property="og:url" content="http://blog.sanhuax2.xyz/about/index.html">
+<meta name="description" content="gitinfo是什么gitinfo是latex的一个宏包。目前我们使用的是它的第二版，叫做 gitinfo2 当latex文件被置于某个git仓库内时，gitinfo可以为latex提供一系列变量，调用它们可以得到上次git提交的提交者用户名、提交时间等信息。 查阅gitinfo的官方文档可以得到详细的资料。  查阅某个tex宏包文档的方法： 在终端中键入命令texdoc &lt;packagen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置gitinfo">
+<meta property="og:url" content="http://blog.sanhuax2.xyz/2020/09/28/gitinfo-configuration/index.html">
 <meta property="og:site_name" content="两只三花">
-<meta property="og:description" content="还没想好(&#x2F;▽＼)">
+<meta property="og:description" content="gitinfo是什么gitinfo是latex的一个宏包。目前我们使用的是它的第二版，叫做 gitinfo2 当latex文件被置于某个git仓库内时，gitinfo可以为latex提供一系列变量，调用它们可以得到上次git提交的提交者用户名、提交时间等信息。 查阅gitinfo的官方文档可以得到详细的资料。  查阅某个tex宏包文档的方法： 在终端中键入命令texdoc &lt;packagen">
 <meta property="og:locale" content="cn">
-<meta property="article:published_time" content="2019-12-01T13:23:41.000Z">
-<meta property="article:modified_time" content="2019-12-01T13:31:45.256Z">
+<meta property="article:published_time" content="2020-09-28T04:43:15.000Z">
+<meta property="article:modified_time" content="2020-09-28T05:26:47.041Z">
 <meta property="article:author" content="mihara kae">
+<meta property="article:tag" content="FLIP00 踩坑指南">
 <meta name="twitter:card" content="summary">
 
 
@@ -130,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.sanhuax2.xyz/about/"/>
+  <link rel="canonical" href="http://blog.sanhuax2.xyz/2020/09/28/gitinfo-configuration/"/>
 
 
 
 
 
-  <title>About me | 两只三花</title>
+  <title>配置gitinfo | 两只三花</title>
   
 
 
@@ -285,34 +284,182 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.sanhuax2.xyz/2020/09/28/gitinfo-configuration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mihara kae">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="两只三花">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">About me</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>还没想好(/▽＼)</p>
+          <h1 class="post-title" itemprop="name headline">配置gitinfo</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T12:43:15+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="gitinfo是什么"><a href="#gitinfo是什么" class="headerlink" title="gitinfo是什么"></a>gitinfo是什么</h2><p>gitinfo是latex的一个宏包。目前我们使用的是它的第二版，叫做 <code>gitinfo2</code></p>
+<p>当latex文件被置于某个git仓库内时，gitinfo可以为latex提供一系列变量，调用它们可以得到上次git提交的提交者用户名、提交时间等信息。</p>
+<p>查阅gitinfo的官方文档可以得到详细的资料。</p>
+<blockquote>
+<p>查阅某个tex宏包文档的方法：</p>
+<p>在终端中键入命令<code>texdoc &lt;packagename&gt;</code></p>
+<p>比如要查gitinfo2的文档，我们敲<code>texdoc gitinfo2</code>就好了</p>
+</blockquote>
+<h2 id="gitinfo如何工作"><a href="#gitinfo如何工作" class="headerlink" title="gitinfo如何工作"></a>gitinfo如何工作</h2><p>那么有聪明的同学可能就要问了，gitinfo是怎么从git数据库抓取信息的呢，它不是latex的宏包吗？</p>
+<p>答案是这样的：</p>
+<ul>
+<li>gitinfo利用了git hook，来在每次git commit时拿到提交信息。</li>
+</ul>
+<p>那么git hook又是什么？</p>
+<ul>
+<li>git hook是git在每次commit（checkout/merge）之前都需要去运行的一个脚本。</li>
+<li>编写git hook可以实现很多有趣的功能，比如每次commit之后让机器人在群里发一条消息，或者提交一条特定的commit之后执行删库跑路操作（好孩子不要学）</li>
+</ul>
+<p>gitinfo的工作流程：</p>
+<ol>
+<li>通过外置的hook脚本，在每次commit(merge/checkout)时生成<code>~/.git/gitHeadInfo.gin</code>文件</li>
+<li>每次编译latex文件时，在<code>~/.git/</code>目录下检查有无<code>gitHeadInfo.gin</code>，有则读取git信息，无则返回None。</li>
+</ol>
+<h2 id="如何配置gitinfo"><a href="#如何配置gitinfo" class="headerlink" title="如何配置gitinfo"></a>如何配置gitinfo</h2><p>gitinfo在它的安装文件夹内提供了3个git hook脚本，分别叫</p>
+<ul>
+<li><code>post-checkout</code></li>
+<li><code>post-commit</code></li>
+<li><code>post-merge</code></li>
+</ul>
+<blockquote>
+<p>这个文件夹在类似于<code>C:/texlive/2019/texmf-dist/doc/latex/gitinfo2</code>的地方</p>
+</blockquote>
+<p>把它们放在你仓库目录下的<code>./git/hooks</code>文件夹内，在下一次commit(merge/checkout)操作时，它们就会生成gitinfo2需要读取的文件<code>gitHeadInfo.gin</code>。</p>
+<p>之后再去编译latex文件，gitinfo就可以正常显示了。</p>
+<p><strong>找不到gitinfo安装文件夹的话，这三个文件在模板文件夹里也有提供。</strong></p>
+<ul>
+<li>位于<code>templatex-master\templatex\gitinfo\</code>内</li>
+</ul>
+<p>实际上，配置方法在模板仓库的<a href="https://github.com/tulip-lab/templatex/blob/develop/templatex/README.md" target="_blank" rel="noopener"><strong>Readme</strong></a>里都有说，结果并没有人去看……（猫猫叹气.jpg）</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/FLIP00-%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/" rel="tag"># FLIP00 踩坑指南</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/22/understand-LSTM-in-pytorch/" rel="next" title="理解pytorch中的LSTM">
+                <i class="fa fa-chevron-left"></i> 理解pytorch中的LSTM
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -345,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -418,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gitinfo是什么"><span class="nav-number">1.</span> <span class="nav-text">gitinfo是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitinfo如何工作"><span class="nav-number">2.</span> <span class="nav-text">gitinfo如何工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何配置gitinfo"><span class="nav-number">3.</span> <span class="nav-text">如何配置gitinfo</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
