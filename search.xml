@@ -3,9 +3,7 @@
   <entry>
     <title>简单易懂的vscode入门指南</title>
     <url>/2021/03/23/vscode-quickstart/</url>
-    <content><![CDATA[<p>Visual Studio Code是由微软带头开发的开源编辑器，有着丰富的功能，出色的性能与强大的可扩展性，因而受到许多人的欢迎。</p>
-<p>本文会对vscode做一个简要的介绍，并收集一些受欢迎的vscode教程供大家参考。</p>
-<p>希望阅读本文的你能喜欢上vscode。</p>
+    <content><![CDATA[<p>Visual Studio Code是由微软带头开发的开源编辑器，有着丰富的功能，出色的性能与强大的可扩展性，因而受到许多人的欢迎。<br>本文会对vscode做一个简要的介绍，并收集一些受欢迎的vscode教程供大家参考。<br>希望阅读本文的你能喜欢上vscode。</p>
 <a id="more"></a>
 
 <h2 id="1-vscode可以用来做什么"><a href="#1-vscode可以用来做什么" class="headerlink" title="1. vscode可以用来做什么"></a>1. vscode可以用来做什么</h2><ul>
@@ -119,7 +117,7 @@
 </li>
 </ul>
 </li>
-<li><p>最后，使用pip或者conda中安装jupyter</p>
+<li><p>最后，使用pip或者conda安装jupyter</p>
 <ul>
 <li><code>pip install jupyter</code></li>
 <li>或 <code>conda install jupyter</code>    </li>
