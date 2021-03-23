@@ -9,14 +9,12 @@
 <a id="more"></a>
 
 <h2 id="1-vscode可以用来做什么"><a href="#1-vscode可以用来做什么" class="headerlink" title="1. vscode可以用来做什么"></a>1. vscode可以用来做什么</h2><ul>
-<li><p>写代码。写一切你能想到和想不到的代码。</p>
-<ul>
+<li>写代码。写一切你能想到和想不到的代码。<ul>
 <li>借助丰富的扩展插件，vscode支持众多主流/小众的编程语言；</li>
 <li>调试运行，语法高亮，自动补全，单元测试，商业IDE支持的功能它全都有，并且不用费心思搞破解，全是免费的；</li>
 </ul>
 </li>
-<li><p>写论文写文档</p>
-<ul>
+<li>写论文写文档<ul>
 <li>借助扩展，vscode同样支持了latex与markdown文档的编写，并均有着不俗的体验。<ul>
 <li>latex: <a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener">使用vscode编写LaTex</a></li>
 <li>markdown: <a href="https://zhuanlan.zhihu.com/p/139140492" target="_blank" rel="noopener">搭建 Markdown 舒适写作环境（VSCode，含扩展盘点）</a></li>
@@ -24,19 +22,15 @@
 </li>
 </ul>
 </li>
-<li><p>代码仓库管理</p>
-<ul>
-<li><p>vscode原生支持git，可直接在编辑器内部对仓库进行管理，无需命令行或额外的git工具（如smart git）</p>
-</li>
-<li><p>借助gitlens, git graph等扩展，还可使得通过git协作更加方便。</p>
-<ul>
+<li>代码仓库管理<ul>
+<li>vscode原生支持git，可直接在编辑器内部对仓库进行管理，无需命令行或额外的git工具（如smart git）</li>
+<li>借助gitlens, git graph等扩展，还可使得通过git协作更加方便。<ul>
 <li><a href="https://www.cnblogs.com/may-day-love/p/13782313.html" target="_blank" rel="noopener">Git魔术——VSCode中如何使用Git（以github作为远端存储库）</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>玩</p>
-<ul>
+<li>玩<ul>
 <li><a href="https://zhuanlan.zhihu.com/p/58302580" target="_blank" rel="noopener">装上这几个 <em>VSCode</em> 插件后，上班划水摸鱼不是梦</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/140895359" target="_blank" rel="noopener">太赞了，<em>VSCode</em> 上也能画流程图了！</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/149836831" target="_blank" rel="noopener">又一款骚气满满的 <em>VSCode</em> 插件，只为吹爆开发者<em>彩虹</em>屁而生！</a></li>
